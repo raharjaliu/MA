@@ -1,0 +1,624 @@
+## RESULTS WITH RADIUS 15 AND QUALITY 2.2
+
+Starting detection process using 4 threads.
+Detection processes 4 frames simultaneously and allocates 1 thread per frame.
+Found 165231 spots.
+Starting initial filtering process.
+Computing spot features.
+Computation done in 2 ms.
+Starting spot filtering process.
+Starting tracking process.
+  Frame to frame LAP solved in 0,1 s.
+  Cost matrix for track segments created in 1,9 s.
+  Track segment LAP solved in 584,2 s.
+Computing track features:
+  - Track duration in 5 ms.
+Computation done in 6 ms.
+Starting track filtering process.
+Computing edge features:
+Computation done in 0 ms.
+
+Contains 5418 spots in total.
+Contains 5418 filtered spots.
+
+Contains 502 tracks in total.
+Contains 502 filtered tracks.
+
+Physical units:
+  space units: pixels
+  time units: frames
+
+Spot features declared:
+   - QUALITY: Quality, 'Quality' (QUALITY) - double valued.
+   - POSITION_X: X, 'X' (POSITION) - double valued.
+   - POSITION_Y: Y, 'Y' (POSITION) - double valued.
+   - POSITION_Z: Z, 'Z' (POSITION) - double valued.
+   - POSITION_T: T, 'T' (TIME) - double valued.
+   - FRAME: Frame, 'Frame' (NONE) - integer valued.
+   - RADIUS: Radius, 'R' (LENGTH) - double valued.
+   - VISIBILITY: Visibility, 'Visibility' (NONE) - integer valued.
+
+Edge features declared:
+
+Track features declared:
+   - TRACK_DURATION: Duration of track, 'Duration' (TIME) - double valued.
+   - TRACK_START: Track start, 'T start' (TIME) - double valued.
+   - TRACK_STOP: Track stop, 'T stop' (TIME) - double valued.
+   - TRACK_DISPLACEMENT: Track displacement, 'Displacement' (LENGTH) - double valued.
+   
+## RESULTS WITH RADIUS 15 AND QUALITY 2.1
+   
+Starting detection process using 4 threads.
+Detection processes 4 frames simultaneously and allocates 1 thread per frame.
+Found 165231 spots.
+Starting initial filtering process.
+Computing spot features.
+Computation done in 1 ms.
+Starting spot filtering process.
+Starting tracking process.
+  Frame to frame LAP solved in 0,0 s.
+  Cost matrix for track segments created in 2,5 s.
+  Track segment LAP solved in 674,9 s.
+Computing track features:
+  - Track duration in 9 ms.
+Computation done in 9 ms.
+Starting track filtering process.
+Computing edge features:
+Computation done in 2 ms.
+
+Contains 6043 spots in total.
+Contains 6043 filtered spots.
+
+Contains 552 tracks in total.
+Contains 552 filtered tracks.
+
+Physical units:
+  space units: pixels
+  time units: frames
+
+Spot features declared:
+   - QUALITY: Quality, 'Quality' (QUALITY) - double valued.
+   - POSITION_X: X, 'X' (POSITION) - double valued.
+   - POSITION_Y: Y, 'Y' (POSITION) - double valued.
+   - POSITION_Z: Z, 'Z' (POSITION) - double valued.
+   - POSITION_T: T, 'T' (TIME) - double valued.
+   - FRAME: Frame, 'Frame' (NONE) - integer valued.
+   - RADIUS: Radius, 'R' (LENGTH) - double valued.
+   - VISIBILITY: Visibility, 'Visibility' (NONE) - integer valued.
+
+Edge features declared:
+
+Track features declared:
+   - TRACK_DURATION: Duration of track, 'Duration' (TIME) - double valued.
+   - TRACK_START: Track start, 'T start' (TIME) - double valued.
+   - TRACK_STOP: Track stop, 'T stop' (TIME) - double valued.
+   - TRACK_DISPLACEMENT: Track displacement, 'Displacement' (LENGTH) - double valued.
+   
+## RESULTS WITH RADIUS 15 AND QUALITY 2.0
+   
+Starting detection process using 4 threads.
+Detection processes 4 frames simultaneously and allocates 1 thread per frame.
+Found 165231 spots.
+Starting initial filtering process.
+Computing spot features.
+Computation done in 1 ms.
+Starting spot filtering process.
+Starting tracking process.
+  Frame to frame LAP solved in 0,1 s.
+  Cost matrix for track segments created in 3,0 s.
+  Track segment LAP solved in 678,9 s.
+Computing track features:
+  - Track duration in 4 ms.
+Computation done in 4 ms.
+Starting track filtering process.
+Computing edge features:
+Computation done in 1 ms.
+
+Contains 6707 spots in total.
+Contains 6707 filtered spots.
+
+Contains 582 tracks in total.
+Contains 582 filtered tracks.
+
+Physical units:
+  space units: pixels
+  time units: frames
+
+Spot features declared:
+   - QUALITY: Quality, 'Quality' (QUALITY) - double valued.
+   - POSITION_X: X, 'X' (POSITION) - double valued.
+   - POSITION_Y: Y, 'Y' (POSITION) - double valued.
+   - POSITION_Z: Z, 'Z' (POSITION) - double valued.
+   - POSITION_T: T, 'T' (TIME) - double valued.
+   - FRAME: Frame, 'Frame' (NONE) - integer valued.
+   - RADIUS: Radius, 'R' (LENGTH) - double valued.
+   - VISIBILITY: Visibility, 'Visibility' (NONE) - integer valued.
+
+Edge features declared:
+
+Track features declared:
+   - TRACK_DURATION: Duration of track, 'Duration' (TIME) - double valued.
+   - TRACK_START: Track start, 'T start' (TIME) - double valued.
+   - TRACK_STOP: Track stop, 'T stop' (TIME) - double valued.
+   - TRACK_DISPLACEMENT: Track displacement, 'Displacement' (LENGTH) - double valued.
+  
+## RESULTS WITH RADIUS 15 AND QUALITY 1.9  
+  
+Starting detection process using 4 threads.
+Detection processes 4 frames simultaneously and allocates 1 thread per frame.
+Found 165231 spots.
+Starting initial filtering process.
+Computing spot features.
+Computation done in 3 ms.
+Starting spot filtering process.
+Starting tracking process.
+  Frame to frame LAP solved in 0,1 s.
+  Cost matrix for track segments created in 4,8 s.
+  Track segment LAP solved in 869,4 s.
+Computing track features:
+  - Track duration in 4 ms.
+Computation done in 5 ms.
+Starting track filtering process.
+Computing edge features:
+Computation done in 1 ms.
+
+Contains 7397 spots in total.
+Contains 7397 filtered spots.
+
+Contains 613 tracks in total.
+Contains 613 filtered tracks.
+
+Physical units:
+  space units: pixels
+  time units: frames
+
+Spot features declared:
+   - QUALITY: Quality, 'Quality' (QUALITY) - double valued.
+   - POSITION_X: X, 'X' (POSITION) - double valued.
+   - POSITION_Y: Y, 'Y' (POSITION) - double valued.
+   - POSITION_Z: Z, 'Z' (POSITION) - double valued.
+   - POSITION_T: T, 'T' (TIME) - double valued.
+   - FRAME: Frame, 'Frame' (NONE) - integer valued.
+   - RADIUS: Radius, 'R' (LENGTH) - double valued.
+   - VISIBILITY: Visibility, 'Visibility' (NONE) - integer valued.
+
+Edge features declared:
+
+Track features declared:
+   - TRACK_DURATION: Duration of track, 'Duration' (TIME) - double valued.
+   - TRACK_START: Track start, 'T start' (TIME) - double valued.
+   - TRACK_STOP: Track stop, 'T stop' (TIME) - double valued.
+   - TRACK_DISPLACEMENT: Track displacement, 'Displacement' (LENGTH) - double valued.
+   
+## RESULTS WITH RADIUS 15 AND QUALITY 1.8
+   
+Starting detection process using 4 threads.
+Detection processes 4 frames simultaneously and allocates 1 thread per frame.
+Found 165231 spots.
+Starting initial filtering process.
+Computing spot features.
+Computation done in 1 ms.
+Starting spot filtering process.
+Starting tracking process.
+  Frame to frame LAP solved in 0,1 s.
+  Cost matrix for track segments created in 4,3 s.
+  Track segment LAP solved in 1287,4 s.
+Computing track features:
+  - Track duration in 4 ms.
+Computation done in 5 ms.
+Starting track filtering process.
+Computing edge features:
+Computation done in 0 ms.
+
+Contains 8176 spots in total.
+Contains 8176 filtered spots.
+
+Contains 652 tracks in total.
+Contains 652 filtered tracks.
+
+Physical units:
+  space units: pixels
+  time units: frames
+
+Spot features declared:
+   - QUALITY: Quality, 'Quality' (QUALITY) - double valued.
+   - POSITION_X: X, 'X' (POSITION) - double valued.
+   - POSITION_Y: Y, 'Y' (POSITION) - double valued.
+   - POSITION_Z: Z, 'Z' (POSITION) - double valued.
+   - POSITION_T: T, 'T' (TIME) - double valued.
+   - FRAME: Frame, 'Frame' (NONE) - integer valued.
+   - RADIUS: Radius, 'R' (LENGTH) - double valued.
+   - VISIBILITY: Visibility, 'Visibility' (NONE) - integer valued.
+
+Edge features declared:
+
+Track features declared:
+   - TRACK_DURATION: Duration of track, 'Duration' (TIME) - double valued.
+   - TRACK_START: Track start, 'T start' (TIME) - double valued.
+   - TRACK_STOP: Track stop, 'T stop' (TIME) - double valued.
+   - TRACK_DISPLACEMENT: Track displacement, 'Displacement' (LENGTH) - double valued.
+   
+## RESULTS WITH RADIUS 15 AND QUALITY 1.7
+   
+Starting detection process using 4 threads.
+Detection processes 4 frames simultaneously and allocates 1 thread per frame.
+Found 165231 spots.
+Starting initial filtering process.
+Computing spot features.
+Computation done in 1 ms.
+Starting spot filtering process.
+Starting tracking process.
+  Frame to frame LAP solved in 0,1 s.
+  Cost matrix for track segments created in 5,5 s.
+  Track segment LAP solved in 2036,4 s.
+Computing track features:
+  - Track duration in 3 ms.
+Computation done in 4 ms.
+Starting track filtering process.
+Computing edge features:
+Computation done in 0 ms.
+
+Contains 9001 spots in total.
+Contains 9001 filtered spots.
+
+Contains 661 tracks in total.
+Contains 661 filtered tracks.
+
+Physical units:
+  space units: pixels
+  time units: frames
+
+Spot features declared:
+   - QUALITY: Quality, 'Quality' (QUALITY) - double valued.
+   - POSITION_X: X, 'X' (POSITION) - double valued.
+   - POSITION_Y: Y, 'Y' (POSITION) - double valued.
+   - POSITION_Z: Z, 'Z' (POSITION) - double valued.
+   - POSITION_T: T, 'T' (TIME) - double valued.
+   - FRAME: Frame, 'Frame' (NONE) - integer valued.
+   - RADIUS: Radius, 'R' (LENGTH) - double valued.
+   - VISIBILITY: Visibility, 'Visibility' (NONE) - integer valued.
+
+Edge features declared:
+
+Track features declared:
+   - TRACK_DURATION: Duration of track, 'Duration' (TIME) - double valued.
+   - TRACK_START: Track start, 'T start' (TIME) - double valued.
+   - TRACK_STOP: Track stop, 'T stop' (TIME) - double valued.
+   - TRACK_DISPLACEMENT: Track displacement, 'Displacement' (LENGTH) - double valued.
+   
+## RESULTS WITH RADIUS 15 AND QUALITY 1.6
+   
+Starting detection process using 4 threads.
+Detection processes 4 frames simultaneously and allocates 1 thread per frame.
+Found 165231 spots.
+Starting initial filtering process.
+Computing spot features.
+Computation done in 1 ms.
+Starting spot filtering process.
+Starting tracking process.
+  Frame to frame LAP solved in 0,1 s.
+  Cost matrix for track segments created in 6,2 s.
+  Track segment LAP solved in 2006,1 s.
+Computing track features:
+  - Track duration in 4 ms.
+Computation done in 5 ms.
+Starting track filtering process.
+Computing edge features:
+Computation done in 0 ms.
+
+Contains 9855 spots in total.
+Contains 9855 filtered spots.
+
+Contains 673 tracks in total.
+Contains 673 filtered tracks.
+
+Physical units:
+  space units: pixels
+  time units: frames
+
+Spot features declared:
+   - QUALITY: Quality, 'Quality' (QUALITY) - double valued.
+   - POSITION_X: X, 'X' (POSITION) - double valued.
+   - POSITION_Y: Y, 'Y' (POSITION) - double valued.
+   - POSITION_Z: Z, 'Z' (POSITION) - double valued.
+   - POSITION_T: T, 'T' (TIME) - double valued.
+   - FRAME: Frame, 'Frame' (NONE) - integer valued.
+   - RADIUS: Radius, 'R' (LENGTH) - double valued.
+   - VISIBILITY: Visibility, 'Visibility' (NONE) - integer valued.
+
+Edge features declared:
+
+Track features declared:
+   - TRACK_DURATION: Duration of track, 'Duration' (TIME) - double valued.
+   - TRACK_START: Track start, 'T start' (TIME) - double valued.
+   - TRACK_STOP: Track stop, 'T stop' (TIME) - double valued.
+   - TRACK_DISPLACEMENT: Track displacement, 'Displacement' (LENGTH) - double valued.
+   
+## RESULTS WITH RADIUS 15 AND QUALITY 1.5
+   
+Starting detection process using 4 threads.
+Detection processes 4 frames simultaneously and allocates 1 thread per frame.
+Found 165231 spots.
+Starting initial filtering process.
+Computing spot features.
+Computation done in 1 ms.
+Starting spot filtering process.
+Starting tracking process.
+  Frame to frame LAP solved in 0,1 s.
+  Cost matrix for track segments created in 7,2 s.
+  Track segment LAP solved in 1767,3 s.
+Computing track features:
+  - Track duration in 5 ms.
+Computation done in 6 ms.
+Starting track filtering process.
+Computing edge features:
+Computation done in 0 ms.
+
+Contains 10696 spots in total.
+Contains 10696 filtered spots.
+
+Contains 665 tracks in total.
+Contains 665 filtered tracks.
+
+Physical units:
+  space units: pixels
+  time units: frames
+
+Spot features declared:
+   - QUALITY: Quality, 'Quality' (QUALITY) - double valued.
+   - POSITION_X: X, 'X' (POSITION) - double valued.
+   - POSITION_Y: Y, 'Y' (POSITION) - double valued.
+   - POSITION_Z: Z, 'Z' (POSITION) - double valued.
+   - POSITION_T: T, 'T' (TIME) - double valued.
+   - FRAME: Frame, 'Frame' (NONE) - integer valued.
+   - RADIUS: Radius, 'R' (LENGTH) - double valued.
+   - VISIBILITY: Visibility, 'Visibility' (NONE) - integer valued.
+
+Edge features declared:
+
+Track features declared:
+   - TRACK_DURATION: Duration of track, 'Duration' (TIME) - double valued.
+   - TRACK_START: Track start, 'T start' (TIME) - double valued.
+   - TRACK_STOP: Track stop, 'T stop' (TIME) - double valued.
+   - TRACK_DISPLACEMENT: Track displacement, 'Displacement' (LENGTH) - double valued.
+
+## RESULTS WITH RADIUS 15 AND QUALITY 1.4 
+  
+Starting detection process using 4 threads.
+Detection processes 4 frames simultaneously and allocates 1 thread per frame.
+Found 165231 spots.
+Starting initial filtering process.
+Computing spot features.
+Computation done in 2 ms.
+Starting spot filtering process.
+Starting tracking process.
+  Frame to frame LAP solved in 0,1 s.
+  Cost matrix for track segments created in 8,9 s.
+  Track segment LAP solved in 1708,4 s.
+Computing track features:
+  - Track duration in 5 ms.
+Computation done in 5 ms.
+Starting track filtering process.
+Computing edge features:
+Computation done in 1 ms.
+
+Contains 11545 spots in total.
+Contains 11545 filtered spots.
+
+Contains 668 tracks in total.
+Contains 668 filtered tracks.
+
+Physical units:
+  space units: pixels
+  time units: frames
+
+Spot features declared:
+   - QUALITY: Quality, 'Quality' (QUALITY) - double valued.
+   - POSITION_X: X, 'X' (POSITION) - double valued.
+   - POSITION_Y: Y, 'Y' (POSITION) - double valued.
+   - POSITION_Z: Z, 'Z' (POSITION) - double valued.
+   - POSITION_T: T, 'T' (TIME) - double valued.
+   - FRAME: Frame, 'Frame' (NONE) - integer valued.
+   - RADIUS: Radius, 'R' (LENGTH) - double valued.
+   - VISIBILITY: Visibility, 'Visibility' (NONE) - integer valued.
+
+Edge features declared:
+
+Track features declared:
+   - TRACK_DURATION: Duration of track, 'Duration' (TIME) - double valued.
+   - TRACK_START: Track start, 'T start' (TIME) - double valued.
+   - TRACK_STOP: Track stop, 'T stop' (TIME) - double valued.
+   - TRACK_DISPLACEMENT: Track displacement, 'Displacement' (LENGTH) - double valued.
+
+## RESULTS WITH RADIUS 14 AND QUALITY 1.4 
+   
+   Starting detection process using 4 threads.
+Detection processes 4 frames simultaneously and allocates 1 thread per frame.
+Found 209080 spots.
+Starting initial filtering process.
+Computing spot features.
+Computation done in 2 ms.
+Starting spot filtering process.
+Starting tracking process.
+  Frame to frame LAP solved in 0,2 s.
+  Cost matrix for track segments created in 10,0 s.
+  Track segment LAP solved in 1724,0 s.
+Computing track features:
+  - Track duration in 3 ms.
+Computation done in 39 ms.
+Starting track filtering process.
+Computing edge features:
+Computation done in 0 ms.
+
+Contains 14460 spots in total.
+Contains 14460 filtered spots.
+
+Contains 564 tracks in total.
+Contains 564 filtered tracks.
+
+Physical units:
+  space units: pixels
+  time units: frames
+
+Spot features declared:
+   - QUALITY: Quality, 'Quality' (QUALITY) - double valued.
+   - POSITION_X: X, 'X' (POSITION) - double valued.
+   - POSITION_Y: Y, 'Y' (POSITION) - double valued.
+   - POSITION_Z: Z, 'Z' (POSITION) - double valued.
+   - POSITION_T: T, 'T' (TIME) - double valued.
+   - FRAME: Frame, 'Frame' (NONE) - integer valued.
+   - RADIUS: Radius, 'R' (LENGTH) - double valued.
+   - VISIBILITY: Visibility, 'Visibility' (NONE) - integer valued.
+
+Edge features declared:
+
+Track features declared:
+   - TRACK_DURATION: Duration of track, 'Duration' (TIME) - double valued.
+   - TRACK_START: Track start, 'T start' (TIME) - double valued.
+   - TRACK_STOP: Track stop, 'T stop' (TIME) - double valued.
+   - TRACK_DISPLACEMENT: Track displacement, 'Displacement' (LENGTH) - double valued.
+
+## RESULTS WITH RADIUS 14 AND QUALITY 1.3
+   
+Starting detection process using 4 threads.
+Detection processes 4 frames simultaneously and allocates 1 thread per frame.
+Found 209080 spots.
+Starting initial filtering process.
+Computing spot features.
+Computation done in 2 ms.
+Starting spot filtering process.
+Starting tracking process.
+  Frame to frame LAP solved in 0,2 s.
+  Cost matrix for track segments created in 10,5 s.
+  Track segment LAP solved in 1499,4 s.
+Computing track features:
+  - Track duration in 3 ms.
+Computation done in 4 ms.
+Starting track filtering process.
+Computing edge features:
+Computation done in 0 ms.
+
+Contains 14973 spots in total.
+Contains 14973 filtered spots.
+
+Contains 560 tracks in total.
+Contains 560 filtered tracks.
+
+Physical units:
+  space units: pixels
+  time units: frames
+
+Spot features declared:
+   - QUALITY: Quality, 'Quality' (QUALITY) - double valued.
+   - POSITION_X: X, 'X' (POSITION) - double valued.
+   - POSITION_Y: Y, 'Y' (POSITION) - double valued.
+   - POSITION_Z: Z, 'Z' (POSITION) - double valued.
+   - POSITION_T: T, 'T' (TIME) - double valued.
+   - FRAME: Frame, 'Frame' (NONE) - integer valued.
+   - RADIUS: Radius, 'R' (LENGTH) - double valued.
+   - VISIBILITY: Visibility, 'Visibility' (NONE) - integer valued.
+
+Edge features declared:
+
+Track features declared:
+   - TRACK_DURATION: Duration of track, 'Duration' (TIME) - double valued.
+   - TRACK_START: Track start, 'T start' (TIME) - double valued.
+   - TRACK_STOP: Track stop, 'T stop' (TIME) - double valued.
+   - TRACK_DISPLACEMENT: Track displacement, 'Displacement' (LENGTH) - double valued.
+   
+## RESULTS WITH RADIUS 14 AND QUALITY 1.2
+   
+Starting detection process using 4 threads.
+Detection processes 4 frames simultaneously and allocates 1 thread per frame.
+Found 209080 spots.
+Starting initial filtering process.
+Computing spot features.
+Computation done in 1 ms.
+Starting spot filtering process.
+Starting tracking process.
+  Frame to frame LAP solved in 0,2 s.
+  Cost matrix for track segments created in 9,7 s.
+  Track segment LAP solved in 1318,7 s.
+Computing track features:
+  - Track duration in 4 ms.
+Computation done in 5 ms.
+Starting track filtering process.
+Computing edge features:
+Computation done in 0 ms.
+
+Contains 15523 spots in total.
+Contains 15523 filtered spots.
+
+Contains 541 tracks in total.
+Contains 541 filtered tracks.
+
+Physical units:
+  space units: pixels
+  time units: frames
+
+Spot features declared:
+   - QUALITY: Quality, 'Quality' (QUALITY) - double valued.
+   - POSITION_X: X, 'X' (POSITION) - double valued.
+   - POSITION_Y: Y, 'Y' (POSITION) - double valued.
+   - POSITION_Z: Z, 'Z' (POSITION) - double valued.
+   - POSITION_T: T, 'T' (TIME) - double valued.
+   - FRAME: Frame, 'Frame' (NONE) - integer valued.
+   - RADIUS: Radius, 'R' (LENGTH) - double valued.
+   - VISIBILITY: Visibility, 'Visibility' (NONE) - integer valued.
+
+Edge features declared:
+
+Track features declared:
+   - TRACK_DURATION: Duration of track, 'Duration' (TIME) - double valued.
+   - TRACK_START: Track start, 'T start' (TIME) - double valued.
+   - TRACK_STOP: Track stop, 'T stop' (TIME) - double valued.
+   - TRACK_DISPLACEMENT: Track displacement, 'Displacement' (LENGTH) - double valued.
+
+## RESULTS WITH RADIUS 14 AND QUALITY 1.1
+   
+Starting detection process using 4 threads.
+Detection processes 4 frames simultaneously and allocates 1 thread per frame.
+Found 209080 spots.
+Starting initial filtering process.
+Computing spot features.
+Computation done in 2 ms.
+Starting spot filtering process.
+Starting tracking process.
+  Frame to frame LAP solved in 0,3 s.
+  Cost matrix for track segments created in 11,8 s.
+  Track segment LAP solved in 1083,8 s.
+Computing track features:
+  - Track duration in 3 ms.
+Computation done in 4 ms.
+Starting track filtering process.
+Computing edge features:
+Computation done in 1 ms.
+
+Contains 16057 spots in total.
+Contains 16057 filtered spots.
+
+Contains 534 tracks in total.
+Contains 534 filtered tracks.
+
+Physical units:
+  space units: pixels
+  time units: frames
+
+Spot features declared:
+   - QUALITY: Quality, 'Quality' (QUALITY) - double valued.
+   - POSITION_X: X, 'X' (POSITION) - double valued.
+   - POSITION_Y: Y, 'Y' (POSITION) - double valued.
+   - POSITION_Z: Z, 'Z' (POSITION) - double valued.
+   - POSITION_T: T, 'T' (TIME) - double valued.
+   - FRAME: Frame, 'Frame' (NONE) - integer valued.
+   - RADIUS: Radius, 'R' (LENGTH) - double valued.
+   - VISIBILITY: Visibility, 'Visibility' (NONE) - integer valued.
+
+Edge features declared:
+
+Track features declared:
+   - TRACK_DURATION: Duration of track, 'Duration' (TIME) - double valued.
+   - TRACK_START: Track start, 'T start' (TIME) - double valued.
+   - TRACK_STOP: Track stop, 'T stop' (TIME) - double valued.
+   - TRACK_DISPLACEMENT: Track displacement, 'Displacement' (LENGTH) - double valued.
+   
