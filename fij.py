@@ -186,6 +186,13 @@ def startTracking(filepath,fdir,ffile, filename):
 	imp_bgmask.changes = False
 	imp_bgmask.close()
 
+	imp_corr_wobg.changes = False
+	imp_corr_wobg.close()
+	#imp_corr_wobg_sub.changes = False
+	#imp_corr_wobg_sub.close()
+	zpimp.changes = False
+	zpimp.close()
+
 	#IJ.log(System.getProperty("os.name"))
 	#IJ.log(fdir)
 
@@ -195,11 +202,12 @@ def preprocess(path, out='out', filename='*'):
 	return startTracking(path, path, out, filename)
 
 def concatenate_files(f1, f2, path):
+	# note that concatenate closes passed windows!
 	ct = Concatenator()
 	merged = ct.run(f1, f2)
 	IJ.saveAs(merged, "Tiff", path);
 
-def process_cell_death_signal(path_signal, path_imp, path_imp_out):
+def process_caspase_signal(path_signal, path_imp, path_imp_out):
 
 	path_imp = path_signal + path_imp
 	imp = IJ.openImage(path_imp)
@@ -216,19 +224,52 @@ def process_cell_death_signal(path_signal, path_imp, path_imp_out):
 
 	imp.changes = False
 	imp.close()
+	imp_sub.changes = False
+	imp_sub.close()
 
-# TODO refactor. Understand listFiles() and change 
+def process_pi_signal(path, position):
+	path_signal = path + "\\pi"
+	path_signal_before = path_signal + "\\before"
+	path_signal_after = path_signal + "\\after"
+	path_signal_merged = path_signal + "\\merged"
+	path_imp_before = path_signal_before + "\\pi_in-focusxy%dc1.tif" % position
+	path_imp_after = path_signal_after + "\\pixy%dc1.tif" % position
+	path_imp_merged = path_signal_merged + "\\merged.tif"
 
-POSITION = 47
+	imp1 = IJ.openImage(path_imp_before)
+	imp1.show()
+	imp2 = IJ.openImage(path_imp_after)
+	imp2.show()
 
-target_dir = 'D:\\MA\\test\\eli-new-unsync-bf-%d' % POSITION
+	concatenate_files(imp1, imp2, path_imp_merged)
 
-before = preprocess(target_dir + '\\out-focus\\before', out='out', filename='*')
-after = preprocess(target_dir + '\\out-focus\\after', out='out', filename='*')
-concatenate(before, after, target_dir + '\\out-focus\\merged\\merged.tif')
+# TODO refactor. Understand listFiles() and change
+"""
+TODO: add following options:
+1. enable/disable window showing
+2. enable/disable automatic window closing after routine
+"""
 
-## processing caspase
-path_signal = target_dir + "\\caspase"
-path_imp ="\\caspasexy%dc1.tif" % POSITION
-path_imp_out = "\\caspasexy%dc1_sub.tif" % POSITION
-process_cell_death_signal(path_signal, path_imp, path_imp_out)
+process_pi = True
+POSITIONS = [48, 49, 50, 51, 52, 53, 54, 55]
+
+for POSITION in POSITIONS:
+
+	target_dir = 'D:\\MA\\test\\eli-new-unsync-bf-%d' % POSITION
+
+	## processing out-focus	
+	before = preprocess(target_dir + '\\out-focus\\before', out='out', filename='*')
+	after = preprocess(target_dir + '\\out-focus\\after', out='out', filename='*')
+	concatenate_files(before, after, target_dir + '\\out-focus\\merged\\merged.tif')
+
+	## processing caspase
+	path_signal = target_dir + "\\caspase"
+	path_imp ="\\caspasexy%dc1.tif" % POSITION
+	path_imp_out = "\\caspasexy%dc1_sub.tif" % POSITION
+	process_caspase_signal(path_signal, path_imp, path_imp_out)
+
+	## processing pi signal
+	if process_pi:
+		process_pi_signal(target_dir, POSITION)
+
+	System.gc();
