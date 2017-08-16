@@ -250,8 +250,8 @@ TODO: add following options:
 2. enable/disable automatic window closing after routine
 """
 
-process_pi = True
-POSITIONS = [48, 49, 50, 51, 52, 53, 54, 55]
+process_pi = False
+POSITIONS = [41, 42, 43, 44, 45, 46, 47]
 
 for POSITION in POSITIONS:
 
