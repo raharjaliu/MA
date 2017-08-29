@@ -232,8 +232,8 @@ def process_pi_signal(path, position):
 	path_signal_before = path_signal + "\\before"
 	path_signal_after = path_signal + "\\after"
 	path_signal_merged = path_signal + "\\merged"
-	path_imp_before = path_signal_before + "\\pi_in-focusxy%dc1.tif" % position
-	path_imp_after = path_signal_after + "\\pixy%dc1.tif" % position
+	path_imp_before = path_signal_before + "\\pi_in-focusxy%sc1.tif" % position
+	path_imp_after = path_signal_after + "\\pixy%sc1.tif" % position
 	path_imp_merged = path_signal_merged + "\\merged.tif"
 
 	imp1 = IJ.openImage(path_imp_before)
@@ -251,11 +251,18 @@ TODO: add following options:
 """
 
 process_pi = False
-POSITIONS = [41, 42, 43, 44, 45, 46, 47]
+POSITIONS = list(range(64))[11:]
 
 for POSITION in POSITIONS:
 
-	target_dir = 'D:\\MA\\test\\eli-new-unsync-bf-%d' % POSITION
+	if POSITION < 10:
+		pos = "0%d" % POSITION
+	else:
+		pos = "%d" % POSITION
+	
+	print("Pre-processing position %s" % pos)
+
+	target_dir = 'D:\\MA\\test\\eli-new-unsync-bf-%s' % pos
 
 	## processing out-focus	
 	before = preprocess(target_dir + '\\out-focus\\before', out='out', filename='*')
@@ -263,13 +270,14 @@ for POSITION in POSITIONS:
 	concatenate_files(before, after, target_dir + '\\out-focus\\merged\\merged.tif')
 
 	## processing caspase
-	path_signal = target_dir + "\\caspase"
-	path_imp ="\\caspasexy%dc1.tif" % POSITION
-	path_imp_out = "\\caspasexy%dc1_sub.tif" % POSITION
-	process_caspase_signal(path_signal, path_imp, path_imp_out)
+	## caspase does not need to be processed now
+	#path_signal = target_dir + "\\caspase"
+	#path_imp ="\\caspasexy%sc1.tif" % pos
+	#path_imp_out = "\\caspasexy%sc1_sub.tif" % pos
+	#process_caspase_signal(path_signal, path_imp, path_imp_out)
 
 	## processing pi signal
 	if process_pi:
-		process_pi_signal(target_dir, POSITION)
+		process_pi_signal(target_dir, pos)
 
 	System.gc();
