@@ -227,31 +227,70 @@ def process_caspase_signal(path_signal, path_imp, path_imp_out):
 	imp_sub.changes = False
 	imp_sub.close()
 
-def process_pi_signal(path, position):
-	path_signal = path + "\\pi"
-	path_signal_before = path_signal + "\\before"
-	path_signal_after = path_signal + "\\after"
-	path_signal_merged = path_signal + "\\merged"
-	path_imp_before = path_signal_before + "\\pi_in-focusxy%sc1.tif" % position
-	path_imp_after = path_signal_after + "\\pixy%sc1.tif" % position
-	path_imp_merged = path_signal_merged + "\\merged.tif"
+def process_pi_signal(path, position, unsynchronized=True):
 
-	imp1 = IJ.openImage(path_imp_before)
-	imp1.show()
-	imp2 = IJ.openImage(path_imp_after)
-	imp2.show()
+	if unsynchronized:
+		path_signal = path + "\\pi"
+		path_signal_before = path_signal + "\\before"
+		path_signal_after = path_signal + "\\after"
+		path_signal_merged = path_signal + "\\merged"
+		path_imp_before = path_signal_before + "\\pi_in-focusxy%sc1.tif" % position
+		path_imp_after = path_signal_after + "\\pixy%sc1.tif" % position
+		path_imp_merged = path_signal_merged + "\\merged.tif"
+		path_imp_merged_sub = path_signal_merged + "\\merged_sub.tif"
 
-	concatenate_files(imp1, imp2, path_imp_merged)
+		imp1 = IJ.openImage(path_imp_before)
+		imp1.show()
+		imp2 = IJ.openImage(path_imp_after)
+		imp2.show()
+
+		zp1 = ZProjector(imp1)
+		zp1.setMethod(ZProjector.AVG_METHOD)
+		zp1.doProjection()
+		zpimp1 = zp1.getProjection()
+
+		zp2 = ZProjector(imp2)
+		zp2.setMethod(ZProjector.AVG_METHOD)
+		zp2.doProjection()
+		zpimp2 = zp2.getProjection()
+
+		imp_sub1 = ImageCalculator().run("Subtract create stack", imp1, zpimp1)
+		imp_sub1.show()
+
+		imp_sub2 = ImageCalculator().run("Subtract create stack", imp2, zpimp2)
+		imp_sub2.show()
+
+		concatenate_files(imp1, imp2, path_imp_merged)
+		concatenate_files(imp_sub1, imp_sub2, path_imp_merged_sub)
+
+	else:
+		path_signal = path + "\\pi\\seq0002xy%sc1.tif" % position
+		path_sub = path + "\\pi\\sub.tif"
+
+		imp = IJ.openImage(path_signal)
+		imp.show()
+
+		zp = ZProjector(imp)
+		zp.setMethod(ZProjector.AVG_METHOD)
+		zp.doProjection()
+		zpimp = zp.getProjection()
+
+		imp_sub = ImageCalculator().run("Subtract create stack", imp, zpimp)
+		imp_sub.show()
+
+		IJ.saveAs(imp_sub, "Tiff", path_sub)
+
+		imp.changes = False
+		imp.close()
+		zpimp.changes = False
+		zpimp.close()
+		imp_sub.changes = False
+		imp_sub.close()		
 
 # TODO refactor. Understand listFiles() and change
-"""
-TODO: add following options:
-1. enable/disable window showing
-2. enable/disable automatic window closing after routine
-"""
 
-process_pi = False
-POSITIONS = list(range(64))[11:]
+unsynchronized = False
+POSITIONS = list(range(64))[63:]
 
 for POSITION in POSITIONS:
 
@@ -262,22 +301,32 @@ for POSITION in POSITIONS:
 	
 	print("Pre-processing position %s" % pos)
 
-	target_dir = 'D:\\MA\\test\\eli-new-unsync-bf-%s' % pos
+	if unsynchronized:
+		target_dir = 'D:\\MA\\test\\eli-new-unsync-bf-%s' % pos
+	else:
+		target_dir = 'D:\\MA\\test\\eli-new-sync-bf-%s' % pos
 
-	## processing out-focus	
-	before = preprocess(target_dir + '\\out-focus\\before', out='out', filename='*')
-	after = preprocess(target_dir + '\\out-focus\\after', out='out', filename='*')
-	concatenate_files(before, after, target_dir + '\\out-focus\\merged\\merged.tif')
+	## processing out-focus
+	if unsynchronized:
+		before = preprocess(target_dir + '\\out-focus\\before', out='out', filename='*')
+		after = preprocess(target_dir + '\\out-focus\\after', out='out', filename='*')
+		concatenate_files(before, after, target_dir + '\\out-focus\\merged\\merged.tif')
+	else:
+		preprocess(target_dir + '\\out-focus', out='out', filename='*').close()
 
 	## processing caspase
-	## caspase does not need to be processed now
-	#path_signal = target_dir + "\\caspase"
-	#path_imp ="\\caspasexy%sc1.tif" % pos
-	#path_imp_out = "\\caspasexy%sc1_sub.tif" % pos
-	#process_caspase_signal(path_signal, path_imp, path_imp_out)
+	if unsynchronized:
+		path_signal = target_dir + "\\caspase"
+		path_imp ="\\caspasexy%sc1.tif" % pos
+		path_imp_out = "\\caspasexy%sc1_sub.tif" % pos
+	else:
+		path_signal = target_dir + "\\caspase"
+		path_imp ="\\seq0001xy%sc1.tif" % pos
+		path_imp_out = "\\seq0001xy%sc1_sub.tif" % pos
+	
+	process_caspase_signal(path_signal, path_imp, path_imp_out)	
 
 	## processing pi signal
-	if process_pi:
-		process_pi_signal(target_dir, pos)
+	process_pi_signal(target_dir, pos, unsynchronized=unsynchronized)
 
 	System.gc();
