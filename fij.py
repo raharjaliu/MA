@@ -289,8 +289,9 @@ def process_pi_signal(path, position, unsynchronized=True):
 
 # TODO refactor. Understand listFiles() and change
 
-unsynchronized = False
-POSITIONS = list(range(64))[63:]
+unsynchronized = True
+POSITIONS = [40]
+#POSITIONS = list(range(64))[63:]
 
 for POSITION in POSITIONS:
 
@@ -301,20 +302,21 @@ for POSITION in POSITIONS:
 	
 	print("Pre-processing position %s" % pos)
 
-	if unsynchronized:
-		target_dir = 'D:\\MA\\test\\eli-new-unsync-bf-%s' % pos
-	else:
-		target_dir = 'D:\\MA\\test\\eli-new-sync-bf-%s' % pos
+	##if unsynchronized:
+	##	#target_dir = 'D:\\MA\\test\\eli-new-unsync-bf-%s' % pos
+	##	target_dir = 'D:\\test\\eli-new-unsync-bf-%s' % pos
+	##else:
+	##	target_dir = 'D:\\MA\\test\\eli-new-sync-bf-%s' % pos
 
-	## processing out-focus
-	if unsynchronized:
-		before = preprocess(target_dir + '\\out-focus\\before', out='out', filename='*')
-		after = preprocess(target_dir + '\\out-focus\\after', out='out', filename='*')
-		concatenate_files(before, after, target_dir + '\\out-focus\\merged\\merged.tif')
-	else:
-		preprocess(target_dir + '\\out-focus', out='out', filename='*').close()
+	# processing out-focus
+	##if unsynchronized:
+	##	before = preprocess(target_dir + '\\out-focus\\before', out='out', filename='*')
+	##	after = preprocess(target_dir + '\\out-focus\\after', out='out', filename='*')
+	##	concatenate_files(before, after, target_dir + '\\out-focus\\merged\\merged.tif')
+	##else:
+	##	preprocess(target_dir + '\\out-focus', out='out', filename='*').close()
 
-	## processing caspase
+	# processing caspase
 	if unsynchronized:
 		path_signal = target_dir + "\\caspase"
 		path_imp ="\\caspasexy%sc1.tif" % pos
@@ -326,7 +328,7 @@ for POSITION in POSITIONS:
 	
 	process_caspase_signal(path_signal, path_imp, path_imp_out)	
 
-	## processing pi signal
-	process_pi_signal(target_dir, pos, unsynchronized=unsynchronized)
+	# processing pi signal
+	##process_pi_signal(target_dir, pos, unsynchronized=unsynchronized)
 
 	System.gc();
